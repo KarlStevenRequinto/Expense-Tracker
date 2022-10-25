@@ -6,7 +6,7 @@ function IconButton({ icon, size, color, onPress }) {
         <Pressable
             onPress={onPress}
             style={({ pressed }) => {
-                pressed && styles.pressed;
+                return pressed && styles.pressed;
             }}
             android_ripple
         >

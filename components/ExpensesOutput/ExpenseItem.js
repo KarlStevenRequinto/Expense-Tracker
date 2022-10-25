@@ -12,7 +12,7 @@ function ExpenseItem({ id, description, amount, date }) {
         <Pressable
             onPress={expensePressHandler}
             style={({ pressed }) => {
-                pressed && styles.pressed;
+                return pressed && styles.pressed;
             }}
             android_ripple
         >
