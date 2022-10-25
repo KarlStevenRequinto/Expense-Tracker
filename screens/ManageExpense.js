@@ -1,9 +1,11 @@
 import { useContext, useLayoutEffect } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, TextInput, View } from "react-native";
 import IconButton from "../UI/IconButton";
 import { GlobalStyles } from "../constants/styles";
 import Button from "../UI/Button";
 import { ExpensesContext } from "../store/expenses-context";
+import ExpenseForm from "../components/ManageExpense/ExpenseForm";
+
 function ManageExpense({ route, navigation }) {
     const editedExpenseId = route.params?.expenseId;
     const isEditing = !!editedExpenseId;
@@ -42,6 +44,8 @@ function ManageExpense({ route, navigation }) {
     }
     return (
         <View style={styles.container}>
+            <ExpenseForm />
+
             <View style={styles.buttons}>
                 <Button
                     mode="flat"
